@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Config files
+.env
+*.config.js
+
+# Logs
+*.log
+
+# Git folder
+.git/
+.gitignore
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Package manager files
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# css
+css
