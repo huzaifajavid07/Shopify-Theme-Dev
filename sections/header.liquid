@@ -5,7 +5,7 @@
         assign main_menu_linklist = section.settings.menu.links
     endif
 %}
-{{ shop.customer_accounts_enabled }}
+{% comment %} {{ shop.customer_accounts_enabled }} {% endcomment %}
 
 <div class="relative bg-white" x-data="{ mobileMenuOpen: true }">
   <div class="mx-auto px-4 sm:px-6">
@@ -79,7 +79,7 @@
           {% render 'icon-shopping-bag' %}
         </a>
 
-         {% if shop.customer_accounts_enabled %}
+         {% comment %} {% if shop.customer_accounts_enabled %} {% endcomment %}
                     {% if customer %}
                         <a href="{{ routes.account_url }}" class="text-base text-gray-500 hover:text-gray-900">account</a>
                         {{ 'Log out' | customer_logout_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
@@ -87,7 +87,7 @@
                         {{ 'Log in ' | customer_login_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
                         {{ 'Register' | customer_register_link | replace: '<a', '<a class="text-base text-gray-500 hover:text-gray-900"' }}
                     {% endif %}
-                {% endif %} 
+                {% comment %} {% endif %}  {% endcomment %}
       </div>
     </div>
   </div>
